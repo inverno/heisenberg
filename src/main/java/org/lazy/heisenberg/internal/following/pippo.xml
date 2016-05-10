@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/settings/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<profiles>
+		<profile>
+			<id>nesoa.snapshots</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>nesoa-snapshots-repository</id>
+					<name>nesoa-snapshots-repository</name>
+					<url>http://maven.nespresso.com/content/repositories/nespresso-nesoa-snapshots</url>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+
+	<mirrors>
+		<mirror>
+			<id>central.mirror</id>
+			<mirrorOf>*</mirrorOf>
+			<url>http://maven.nespresso.com/content/groups/public-nesoa</url>
+		</mirror>
+		<mirror>
+			<id>nesoa-snapshots-repository.mirror</id>
+			<mirrorOf>nesoa-snapshots-repository</mirrorOf>
+			<url>http://maven.nespresso.com/content/repositories/nespresso-nesoa-snapshots</url>
+		</mirror>
+	</mirrors>
+	<pluginGroups>
+		<pluginGroup>com.nespresso.maven.plugins</pluginGroup>
+	</pluginGroups>
+
+</settings>
